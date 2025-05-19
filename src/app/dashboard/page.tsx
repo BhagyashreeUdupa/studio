@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import MetricCard from "@/components/dashboard/MetricCard";
-import AnomalyDetectionSection from "@/components/dashboard/AnomalyDetectionSection";
 import { Cpu, MemoryStick, HardDrive, Network, RefreshCcw } from "lucide-react";
 import {
   MOCK_CPU_USAGE_DATA,
@@ -60,7 +59,6 @@ export default function DashboardPage() {
             <CardSkeleton key={i} />
           ))}
         </div>
-        <Skeleton className="h-64 w-full rounded-lg" />
       </div>
     );
   }
@@ -110,15 +108,6 @@ export default function DashboardPage() {
           data={networkData}
           chartColor="hsl(var(--chart-4))"
           description="Current network throughput"
-        />
-      </div>
-
-      <div>
-        <AnomalyDetectionSection
-          cpuData={cpuData}
-          memoryData={memoryData}
-          diskData={diskData}
-          networkData={networkData}
         />
       </div>
     </div>

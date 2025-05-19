@@ -23,7 +23,6 @@ export default function DashboardLoading() {
           <CardSkeleton key={i} />
         ))}
       </div>
-      <Skeleton className="h-64 w-full rounded-lg" />
     </div>
   );
 }
